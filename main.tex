@@ -1,0 +1,65 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{/}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{fancy}
+\cfoot{\thepage\hspace{1pt}/\pageref{LastPage}}
+
+
+\begin{document}
+
+
+\begin{wrapfigure}{L}{20px}
+\includegraphics[width=1.5cm,height=1.3cm,keepaspectratio]{ee.png}
+\end{wrapfigure}
+
+Politechnika Warszawska 
+\hfill Data utworzenia: DD/MM/2015
+
+Wydział Elektryczny
+\hfill Ostatnia modyfikacja: \today
+
+\hfill Wersja: A2
+
+\quad
+\begin{center}
+\center \Huge Tytuł
+\center \large Podtytuł
+\vspace{0.5cm}\\
+\small Autorzy: B W, \underline{Jereczek Michał}, Ł J, M P, W K
+\vspace{0.1cm}\\
+\small Weryfikacja: Ł J
+\end{center}
+
+\tableofcontents
+\pagebreak
+
+\section{Rozdział 1}
+\subsection{Podrozdział 1}
+
+\pagebreak
+\section{Historia zmian}
+\begin{center}
+    \begin{tabular}{ | p{0.5cm} | p{4.5cm} | p{6cm} | p{2cm} |p{1.2cm} |}
+    \hline
+    Nr. & Osoba & Zmiana & Data & Wersja 
+    \\ \hline
+    2. & Michał Jereczek & Dodanie daty do historii zmian & 30/10/2015  & A2
+    \\ \hline
+    1. & Michał Jereczek & Dodanie szablonu dokumentu formalnego & 22/10/2015  & A1
+    \\ \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
