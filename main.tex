@@ -8,29 +8,36 @@
 \usepackage{wrapfig}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage[final]{pdfpages}
+\usepackage{indentfirst}
 \usepackage[ddmmyyyy]{datetime}
+\usepackage{hyperref}
+\usepackage{listings}
+
 \renewcommand{\dateseparator}{/}
 \fancyhead{}
 \renewcommand{\headrulewidth}{0pt}
 
 \pagestyle{fancy}
-\cfoot{\thepage\hspace{1pt}/\pageref{LastPage}}
+\cfoot{\thepage\hspace{1pt}/\hspace{2pt}\pageref{LastPage}}
 
 
 \begin{document}
 
 
 \begin{wrapfigure}{L}{20px}
-\includegraphics[width=1.5cm,height=1.3cm,keepaspectratio]{ee.png}
+%\includegraphics[width=1.5cm,height=1.3cm,keepaspectratio]{logo_ee.png}
+\includegraphics[height=1.5cm,keepaspectratio]{WE-znak.png}
 \end{wrapfigure}
 
-Politechnika Warszawska 
-\hfill Data utworzenia: DD/MM/2015
+%Politechnika Warszawska 
+\hfill Data utworzenia: \today
 
-Wydział Elektryczny
+%Wydział Elektryczny
 \hfill Ostatnia modyfikacja: \today
 
-\hfill Wersja: A2
+\hfill Wersja: AZ %AZ to wersja skończona, potem lecimy B1,B2...BZ
+
 
 \quad
 \begin{center}
@@ -45,8 +52,21 @@ Wydział Elektryczny
 \tableofcontents
 \pagebreak
 
-\section{Rozdział 1}
-\subsection{Podrozdział 1}
+\section{Rozdział}
+Spójrz na przykładowy kod w Listingu \ref{lst:kod}. Fajny prawda?
+
+\begin{lstlisting}[language=Python,frame=single,caption=Skrypt obliczający obciążenie cieplne oraz moment znamionowy,label={lst:kod},   showstringspaces=false]
+import math
+
+tx = [5, 4, 6, 3, 3, 4, 15, 20, 5, 5, 4, 26, 10, 4, 4, 5, 31
+, 6, 3, 3, 4, 18, 4, 7, 36, 10, 4, 11, 3, 4, 28, 5]
+Ix = [0, 140, 0, 115, 175, 290, 120, 0, 170, 0, 160, 150, 0
+, 180, 230, 315, 130, 0, 160, 205, 270, 0, 160, 210, 190, 0
+, 130, 0, 140, 200, 130, 0]
+
+
+\end{lstlisting}
+
 
 \pagebreak
 \section{Historia zmian}
@@ -55,11 +75,14 @@ Wydział Elektryczny
     \hline
     Nr. & Osoba & Zmiana & Data & Wersja 
     \\ \hline
+    3. & Michał Jereczek & Aktualizacja loga itp & 12/11/2017  & A3
+    \\ \hline
     2. & Michał Jereczek & Dodanie daty do historii zmian & 30/10/2015  & A2
     \\ \hline
     1. & Michał Jereczek & Dodanie szablonu dokumentu formalnego & 22/10/2015  & A1
     \\ \hline
     \end{tabular}
 \end{center}
+
 
 \end{document}
